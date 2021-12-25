@@ -1,0 +1,20 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+menuconfig LIBLORAWAN
+	bool "LoRaWAN Library"
+	default n
+	---help---
+		Enable build for LoRaWAN Library
+
+if LIBLORAWAN
+
+config LIBLORAWAN_DEBUG
+	bool "LoRaWAN debugging"
+	default n
+	---help---
+		Enable debugging for LoRaWAN Library
+
+endif # LIBLORAWAN
