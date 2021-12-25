@@ -21,6 +21,10 @@
 
 # Apache NimBLE Porting Layer for Apache NuttX OS
 
+Read the article...
+
+-   ["LoRa SX1262 on Apache NuttX OS"](https://lupyuen.github.io/articles/sx1262)
+
 <img src="http://mynewt.apache.org/img/logo.svg" width="250" alt="Apache Mynewt">
 
 ## Overview
