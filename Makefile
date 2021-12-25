@@ -1,5 +1,5 @@
 ############################################################################
-# libs/liblorawan/Makefile
+# libs/libnpl/Makefile
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -20,80 +20,9 @@
 
 include $(TOPDIR)/Make.defs
 
-ifeq ($(CONFIG_LIBLORAWAN),y)
-
-#---------------------------------------------------------------------------------------
-# Application common features handling
-#---------------------------------------------------------------------------------------
-#### TODO: CSRCS += src/apps/LoRaMac/common/cli.c
-CSRCS += src/apps/LoRaMac/common/LmHandlerMsgDisplay.c
-CSRCS += src/apps/LoRaMac/common/NvmDataMgmt.c
-
-#---------------------------------------------------------------------------------------
-# Application LoRaMac handler
-#---------------------------------------------------------------------------------------
-CSRCS += src/apps/LoRaMac/common/LmHandler/LmHandler.c
-
-#---------------------------------------------------------------------------------------
-# LoRaMac handler applicative packages
-#---------------------------------------------------------------------------------------
-CSRCS += src/apps/LoRaMac/common/LmHandler/packages/FragDecoder.c
-CSRCS += src/apps/LoRaMac/common/LmHandler/packages/LmhpClockSync.c
-CSRCS += src/apps/LoRaMac/common/LmHandler/packages/LmhpCompliance.c
-CSRCS += src/apps/LoRaMac/common/LmHandler/packages/LmhpFragmentation.c
-CSRCS += src/apps/LoRaMac/common/LmHandler/packages/LmhpRemoteMcastSetup.c
-
-#---------------------------------------------------------------------------------------
-# Boards
-#---------------------------------------------------------------------------------------
-CSRCS += src/boards/mcu/utilities.c
-
-#---------------------------------------------------------------------------------------
-# LoRaMac Regions
-#---------------------------------------------------------------------------------------
-CSRCS += src/mac/region/RegionAS923.c
-#### TODO: CSRCS += src/mac/region/RegionCN779.c
-#### TODO: CSRCS += src/mac/region/RegionEU433.c
-#### TODO: CSRCS += src/mac/region/RegionEU868.c
-#### TODO: CSRCS += src/mac/region/RegionIN865.c
-#### TODO: CSRCS += src/mac/region/RegionRU864.c
-#### TODO: CSRCS += src/mac/region/RegionKR920.c
-#### TODO: CSRCS += src/mac/region/RegionBaseUS.c
-CSRCS += src/mac/region/RegionCommon.c
-CSRCS += src/mac/region/Region.c
-
-#---------------------------------------------------------------------------------------
-# LoRaMac
-#---------------------------------------------------------------------------------------
-CSRCS += src/mac/LoRaMac.c
-CSRCS += src/mac/LoRaMacAdr.c
-CSRCS += src/mac/LoRaMacClassB.c
-CSRCS += src/mac/LoRaMacCommands.c
-CSRCS += src/mac/LoRaMacConfirmQueue.c
-CSRCS += src/mac/LoRaMacCrypto.c
-CSRCS += src/mac/LoRaMacParser.c
-CSRCS += src/mac/LoRaMacSerializer.c
-
-#---------------------------------------------------------------------------------------
-# Peripherals
-#---------------------------------------------------------------------------------------
-CSRCS += src/peripherals/soft-se/aes.c
-CSRCS += src/peripherals/soft-se/cmac.c
-CSRCS += src/peripherals/soft-se/soft-se-hal.c
-CSRCS += src/peripherals/soft-se/soft-se.c
-
-#---------------------------------------------------------------------------------------
-# System
-#---------------------------------------------------------------------------------------
-CSRCS += src/system/nvmm.c
-CSRCS += src/system/systime.c
-
-#---------------------------------------------------------------------------------------
-# NuttX
-#---------------------------------------------------------------------------------------
+ifeq ($(CONFIG_LIBNPL),y)
 CSRCS += src/nuttx.c
-
-endif # CONFIG_LIBLORAWAN
+endif # CONFIG_LIBNPL
 
 AOBJS = $(ASRCS:.S=$(OBJEXT))
 COBJS = $(CSRCS:.c=$(OBJEXT))
@@ -101,7 +30,7 @@ COBJS = $(CSRCS:.c=$(OBJEXT))
 SRCS = $(ASRCS) $(CSRCS)
 OBJS = $(AOBJS) $(COBJS)
 
-BIN ?= liblorawan$(LIBEXT)
+BIN ?= libnpl$(LIBEXT)
 
 all: $(BIN)
 .PHONY:  depend clean distclean

@@ -3,18 +3,18 @@
 # see the file kconfig-language.txt in the NuttX tools repository.
 #
 
-menuconfig LIBLORAWAN
-	bool "LoRaWAN Library"
+menuconfig LIBNPL
+	bool "NimBLE Porting Layer"
 	default n
 	---help---
-		Enable build for LoRaWAN Library
+		Enable build for NimBLE Porting Layer
 
-if LIBLORAWAN
+if LIBNPL
 
-config LIBLORAWAN_DEBUG
-	bool "LoRaWAN debugging"
+config LIBNPL_DEBUG
+	bool "NimBLE Porting Layer debugging"
 	default n
 	---help---
-		Enable debugging for LoRaWAN Library
+		Enable debugging for NimBLE Porting Layer
 
-endif # LIBLORAWAN
+endif # LIBNPL
