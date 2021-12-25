@@ -25,6 +25,8 @@ Read the article...
 
 -   ["LoRa SX1262 on Apache NuttX OS"](https://lupyuen.github.io/articles/sx1262)
 
+NimBLE Porting Layer Source Files are located in the [`porting`](porting) folder.
+
 <img src="http://mynewt.apache.org/img/logo.svg" width="250" alt="Apache Mynewt">
 
 ## Overview
