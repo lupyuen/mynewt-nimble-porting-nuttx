@@ -21,7 +21,7 @@
 #include <stdint.h>
 #include <pthread.h>
 
-#include "nimble/nimble_npl.h"
+#include "../../../../nimble/include/nimble/nimble_npl.h"
 
 static pthread_mutex_t s_mutex = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
 

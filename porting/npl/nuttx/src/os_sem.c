@@ -23,7 +23,7 @@
 #include <semaphore.h>
 
 #include "os/os.h"
-#include "nimble/nimble_npl.h"
+#include "../../../../nimble/include/nimble/nimble_npl.h"
 
 ble_npl_error_t
 ble_npl_sem_init(struct ble_npl_sem *sem, uint16_t tokens)

@@ -26,7 +26,7 @@
 #include <time.h>
 #include <signal.h>
 
-#include "nimble/nimble_npl.h"
+#include "../../../../nimble/include/nimble/nimble_npl.h"
 
 #ifndef CONFIG_NIMBLE_CALLOUT_THREAD_STACKSIZE
 #define CONFIG_NIMBLE_CALLOUT_THREAD_STACKSIZE 1024

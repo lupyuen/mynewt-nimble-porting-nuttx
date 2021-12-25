@@ -21,7 +21,9 @@
 include $(TOPDIR)/Make.defs
 
 ifeq ($(CONFIG_LIBNPL),y)
-CSRCS += src/nuttx.c
+
+CSRCS += porting/npl/nuttx/src/os_eventq.c
+
 endif # CONFIG_LIBNPL
 
 AOBJS = $(ASRCS:.S=$(OBJEXT))

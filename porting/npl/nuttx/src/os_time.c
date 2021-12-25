@@ -22,7 +22,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "os/os.h"
-#include "nimble/nimble_npl.h"
+#include "../../../../nimble/include/nimble/nimble_npl.h"
 
 #include <unistd.h>
 #include <time.h>

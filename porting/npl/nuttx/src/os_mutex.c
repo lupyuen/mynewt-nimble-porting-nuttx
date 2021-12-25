@@ -22,7 +22,7 @@
 #include <pthread.h>
 
 #include "os/os.h"
-#include "nimble/nimble_npl.h"
+#include "../../../../nimble/include/nimble/nimble_npl.h"
 
 ble_npl_error_t
 ble_npl_mutex_init(struct ble_npl_mutex *mu)

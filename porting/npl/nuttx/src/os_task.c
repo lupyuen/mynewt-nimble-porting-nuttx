@@ -21,7 +21,7 @@
 #include <errno.h>
 
 #include "os/os.h"
-#include "nimble/nimble_npl.h"
+#include "../../../../nimble/include/nimble/nimble_npl.h"
 
 #ifdef __cplusplus
 extern "C" {
