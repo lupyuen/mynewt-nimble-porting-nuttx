@@ -34,7 +34,7 @@
 #if MYNEWT_VAL(OS_SYSVIEW)
 #include "sysview/vendor/SEGGER_SYSVIEW.h"
 #endif
-#include "os/os.h"
+#include "../os/os.h"
 
 #define OS_TRACE_ID_EVENTQ_PUT                  (40)
 #define OS_TRACE_ID_EVENTQ_GET_NO_WAIT          (41)

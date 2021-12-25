@@ -20,7 +20,7 @@
 #ifndef H_OS_ERROR_
 #define H_OS_ERROR_
 
-#include "os/os.h"
+#include "../os/os.h"
 
 #ifdef __cplusplus
 extern "C" {

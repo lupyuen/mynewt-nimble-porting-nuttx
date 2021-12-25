@@ -23,13 +23,12 @@ include $(TOPDIR)/Make.defs
 ifeq ($(CONFIG_LIBNPL),y)
 
 # TODO: CSRCS += porting/npl/nuttx/src/os_atomic.c
-CSRCS += porting/npl/nuttx/src/os_callout.c
+# TODO: CSRCS += porting/npl/nuttx/src/os_callout.c
 CSRCS += porting/npl/nuttx/src/os_eventq.c
-CSRCS += porting/npl/nuttx/src/os_eventq.o
 CSRCS += porting/npl/nuttx/src/os_mutex.c
 CSRCS += porting/npl/nuttx/src/os_sem.c
 CSRCS += porting/npl/nuttx/src/os_task.c
-CSRCS += porting/npl/nuttx/src/os_time.c
+# TODO: CSRCS += porting/npl/nuttx/src/os_time.c
 
 endif # CONFIG_LIBNPL
 

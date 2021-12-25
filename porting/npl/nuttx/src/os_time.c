@@ -21,7 +21,7 @@
 #include <assert.h>
 #include <stdint.h>
 #include <string.h>
-#include "os/os.h"
+#include "../../../nimble/include/os/os.h"
 #include "../../../../nimble/include/nimble/nimble_npl.h"
 
 #include <unistd.h>

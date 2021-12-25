@@ -29,8 +29,8 @@
 #define _OS_MEMPOOL_H_
 
 #include <stdbool.h>
-#include "os/os.h"
-#include "os/queue.h"
+#include "../os/os.h"
+#include "../os/queue.h"
 
 #ifdef __cplusplus
 extern "C" {

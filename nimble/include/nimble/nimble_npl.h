@@ -50,7 +50,11 @@ enum ble_npl_error {
 typedef enum ble_npl_error ble_npl_error_t;
 
 /* Include OS-specific definitions */
+#ifdef __NuttX__
 #include "../../../porting/npl/nuttx/include/nimble/nimble_npl_os.h"
+#else
+#include "nimble/nimble_npl_os.h"
+#endif  //  __NuttX__
 
 /*
  * Generic

@@ -20,7 +20,7 @@
 #include <nuttx/config.h>
 #include <errno.h>
 
-#include "os/os.h"
+#include "../../../nimble/include/os/os.h"
 #include "../../../../nimble/include/nimble/nimble_npl.h"
 
 #ifdef __cplusplus

@@ -29,7 +29,7 @@
 #ifndef _OS_MBUF_H
 #define _OS_MBUF_H
 
-#include "os/os.h"
+#include "../os/os.h"
 
 #ifdef __cplusplus
 extern "C" {
