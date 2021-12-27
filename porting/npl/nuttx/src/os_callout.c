@@ -42,27 +42,30 @@ pthread_cond_t callout_cond = PTHREAD_COND_INITIALIZER;
 static pthread_addr_t
 callout_handler(pthread_addr_t arg)
 {
-    struct ble_npl_callout *c;
+    for (;;) { //// TODO: Need to loop to handle multiple callouts
+        struct ble_npl_callout *c;
 
-    pthread_mutex_lock(&callout_mutex);
-    while (!pending_callout) {
-      pthread_cond_wait(&callout_cond, &callout_mutex);
-    }
+        puts("callout_handler: lock"); ////
+        pthread_mutex_lock(&callout_mutex);
+        while (!pending_callout) {
+        pthread_cond_wait(&callout_cond, &callout_mutex);
+        }
 
-    c = pending_callout;
-    pending_callout = NULL;
-    pthread_mutex_unlock(&callout_mutex);
+        c = pending_callout;
+        pending_callout = NULL;
+        pthread_mutex_unlock(&callout_mutex);
+        puts("callout_handler: unlock"); ////
 
-    /* Invoke callback */
+        /* Invoke callback */
 
-    if (c->c_evq) {
-        printf("callout_handler: evq=%p, ev=%p\n", c->c_evq, &c->c_ev); ////
-        ble_npl_eventq_put(c->c_evq, &c->c_ev);
-    } else {
-        printf("callout_handler: ev=%p\n", &c->c_ev); ////
-        c->c_ev.ev_cb(&c->c_ev);
-    }
-
+        if (c->c_evq) {
+            printf("callout_handler: evq=%p, ev=%p\n", c->c_evq, &c->c_ev); ////
+            ble_npl_eventq_put(c->c_evq, &c->c_ev);
+        } else {
+            printf("callout_handler: ev=%p\n", &c->c_ev); ////
+            c->c_ev.ev_cb(&c->c_ev);
+        }
+    } //// TODO: End of loop to handle multiple callouts
     return NULL;
 }
 
