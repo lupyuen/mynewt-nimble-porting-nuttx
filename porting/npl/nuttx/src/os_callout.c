@@ -149,6 +149,7 @@ ble_npl_callout_reset(struct ble_npl_callout *c,
     c->c_active = true;
     timer_settime(c->c_timer, 0, &its, NULL);
 
+    printf("callout_reset: evq=%p, ev=%p\n", c->c_evq, &c->c_ev); ////
     return BLE_NPL_OK;
 }
 
