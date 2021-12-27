@@ -104,7 +104,8 @@ ble_npl_callout_init(struct ble_npl_callout *c,
     event.sigev_notify_function = ble_npl_callout_timer_cb;
     event.sigev_notify_attributes = NULL;
 
-    timer_create(CLOCK_REALTIME, &event, &c->c_timer);
+    int res = timer_create(CLOCK_REALTIME, &event, &c->c_timer);
+    assert(res == 0);
 }
 
 bool
