@@ -56,8 +56,10 @@ callout_handler(pthread_addr_t arg)
     /* Invoke callback */
 
     if (c->c_evq) {
+        printf("callout_handler: evq=%p, ev=%p\n", c->c_evq, &c->c_ev); ////
         ble_npl_eventq_put(c->c_evq, &c->c_ev);
     } else {
+        printf("callout_handler: ev=%p\n", &c->c_ev); ////
         c->c_ev.ev_cb(&c->c_ev);
     }
 
