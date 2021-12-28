@@ -62,6 +62,8 @@ In menuconfig, enable the NimBLE Porting Layer under "Libraries".
 
 NimBLE Porting Layer Source Files are located in the [`porting`](porting) folder.
 
+This repo is a fork of [apache/mynewt-nimble](https://github.com/apache/mynewt-nimble) with minimal changes...
+
 <img src="http://mynewt.apache.org/img/logo.svg" width="250" alt="Apache Mynewt">
 
 ## Overview
