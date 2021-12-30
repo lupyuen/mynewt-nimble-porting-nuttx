@@ -25,6 +25,8 @@ Read the articles...
 
 -   ["LoRa SX1262 on Apache NuttX OS"](https://lupyuen.github.io/articles/sx1262)
 
+-   ["LoRaWAN on Apache NuttX OS"](https://lupyuen.github.io/articles/lorawan3)
+
 To add this repo to your NuttX project...
 
 ```bash
