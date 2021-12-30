@@ -32,6 +32,12 @@ cd nuttx/libs
 git submodule add https://github.com/lupyuen/nimble-porting-nuttx libnpl
 ```
 
+Next update the Makefiles and Kconfig...
+
+-   ["Update Makefiles and Kconfig"](https://lupyuen.github.io/articles/sx1262#update-makefiles-and-kconfig)
+
+(Change "__sx1262__" to "__npl__", preserve case)
+
 Then update the NuttX Build Config...
 
 ```bash
