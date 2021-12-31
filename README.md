@@ -38,7 +38,11 @@ Next update the Makefiles and Kconfig...
 
 -   ["Update Makefiles and Kconfig"](https://lupyuen.github.io/articles/sx1262#update-makefiles-and-kconfig)
 
-(Change "__sx1262__" to "__npl__", preserve case)
+    Change "__sx1262__" to "__npl__", preserve case
+
+-   [See the modified Makefiles](https://github.com/lupyuen/incubator-nuttx/commit/4fed43699f4e82790a54e6ca8f4557f6ed094ae1?diff=unified)
+
+-   [See the modified Kconfig](https://github.com/lupyuen/incubator-nuttx/commit/c418f13e13256b7ff978c5d1252d3b10d87f6fb3?diff=unified)
 
 Then update the NuttX Build Config...
 
