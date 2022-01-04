@@ -70,7 +70,7 @@ cp ../config .config
 make menuconfig 
 ```
 
-In menuconfig, enable the NimBLE Porting Layer under "Libraries".
+In menuconfig, enable the NimBLE Porting Layer under "Library Routines".
 
 NimBLE Porting Layer Source Files are located in the [`porting`](porting) folder.
 
